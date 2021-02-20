@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test",
+            "outputPath": "docs/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,8 +23,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-            ],
+            "styles": [],
             "scripts": []
           },
           "configurations": {
@@ -86,9 +85,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-            ],
-            "scripts": ["../node_modules/chart.js/dist/Chart.min.js"]
+            "styles": [],
+            "scripts": [
+              "../node_modules/chart.js/dist/Chart.min.js"
+            ]
           }
         },
         "lint": {
@@ -115,6 +115,10 @@
               "devServerTarget": "test:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
